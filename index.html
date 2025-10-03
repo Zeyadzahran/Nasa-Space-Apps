@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mars Waste Recycling System - Mission Control</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1>MARS-WRS</h1>
+                    <span class="mission-code">JEZERO-2025</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="system.html" class="nav-link">System</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="scenarios.html" class="nav-link">Scenarios</a></li>
+                    <li><a href="circular.html" class="nav-link">Circular Economy</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+                <div class="mission-status">
+                    <span class="status-indicator active"></span>
+                    <span>MISSION ACTIVE</span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Mars Waste Recycling System</h1>
+                    <p class="hero-subtitle">Transforming 12,600 kg of Mission Waste into Essential Survival Resources
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="12600">0</span>
+                            <span class="stat-unit">kg</span>
+                            <p class="stat-label">Total Waste Processed</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="78">0</span>
+                            <span class="stat-unit">%</span>
+                            <p class="stat-label">Recycling Efficiency</p>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-target="9800">0</span>
+                            <span class="stat-unit">kg</span>
+                            <p class="stat-label">Resources Produced</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="mars-surface"></div>
+                    <div class="recycling-flow">
+                        <div class="flow-item waste">
+                            <span>WASTE INPUT</span>
+                        </div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-item processing">
+                            <span>PROCESSING</span>
+                        </div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-item output">
+                            <span>NEW RESOURCES</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mission-overview">
+                <div class="section-header">
+                    <h2>Mission Overview</h2>
+                    <p>Jezero Crater - Sol 1,247 - 8 Astronauts - 3 Year Mission</p>
+                </div>
+
+                <div class="overview-grid">
+                    <article class="overview-card">
+                        <div class="card-icon">🏭</div>
+                        <h3>Waste Categories</h3>
+                        <p>Processing fabrics, packaging, EVA waste, aluminum composites, foam, and gloves into reusable
+                            materials.</p>
+                        <ul class="waste-list">
+                            <li>Fabrics: 3,150 kg → Insulation</li>
+                            <li>Food Packaging: 3,780 kg → Containers</li>
+                            <li>EVA Waste: 1,890 kg → Tools</li>
+                            <li>Aluminum: 1,260 kg → Reinforcements</li>
+                            <li>Foam: 2,520 kg → Bricks</li>
+                        </ul>
+                    </article>
+
+                    <article class="overview-card">
+                        <div class="card-icon">🔧</div>
+                        <h3>Output Products</h3>
+                        <p>Converting waste streams into critical mission resources and habitat improvements.</p>
+                        <div class="output-examples">
+                            <div class="output-item">
+                                <strong>200 kg foam</strong> → 120 building bricks
+                            </div>
+                            <div class="output-item">
+                                <strong>50 kg fabrics</strong> → 30 m² insulation
+                            </div>
+                            <div class="output-item">
+                                <strong>100 kg packaging</strong> → 85 containers
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="overview-card">
+                        <div class="card-icon">🌱</div>
+                        <h3>Environmental Impact</h3>
+                        <p>Zero-emission recycling preserving Mars atmosphere and ensuring crew safety.</p>
+                        <div class="impact-metrics">
+                            <div class="metric">No toxic emissions</div>
+                            <div class="metric">78% waste reduction</div>
+                            <div class="metric">Microplastic prevention</div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="quick-nav">
+                <h2>Mission Control Stations</h2>
+                <div class="nav-grid">
+                    <a href="system.html" class="nav-card">
+                        <div class="nav-icon">🔄</div>
+                        <h3>System Visualization</h3>
+                        <p>Interactive flow diagrams and waste processing pathways</p>
+                    </a>
+                    <a href="dashboard.html" class="nav-card">
+                        <div class="nav-icon">📊</div>
+                        <h3>Data Dashboard</h3>
+                        <p>Real-time analytics and waste processing metrics</p>
+                    </a>
+                    <a href="scenarios.html" class="nav-card">
+                        <div class="nav-icon">🚀</div>
+                        <h3>Mission Scenarios</h3>
+                        <p>Renovations, celebrations, and discovery applications</p>
+                    </a>
+                    <a href="circular.html" class="nav-card">
+                        <div class="nav-icon">♻️</div>
+                        <h3>Circular Economy</h3>
+                        <p>Closed-loop resource management on Mars</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Mars Waste Recycling System</h4>
+                    <p>Mission Control - Jezero Crater Operations</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Mission Status</h4>
+                    <p>Sol 1,247 - All Systems Operational</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Earth Relay: +3.7 minutes delay</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

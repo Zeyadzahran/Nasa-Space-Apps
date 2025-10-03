@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dashboard - Mars Waste Recycling System</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1>MARS-WRS</h1>
+                    <span class="mission-code">JEZERO-2025</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="system.html" class="nav-link">System</a></li>
+                    <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                    <li><a href="scenarios.html" class="nav-link">Scenarios</a></li>
+                    <li><a href="circular.html" class="nav-link">Circular Economy</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+                <div class="mission-status">
+                    <span class="status-indicator active"></span>
+                    <span>DATA ACTIVE</span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="dashboard-header">
+                <div class="header-content">
+                    <h1>Mission Data Dashboard</h1>
+                    <p>Real-time analytics and waste processing metrics for Sol 1,247</p>
+                </div>
+
+                <div class="realtime-stats">
+                    <div class="stat-widget">
+                        <h3>Processing Today</h3>
+                        <div class="widget-value">
+                            <span class="realtime-counter">47.3</span>
+                            <span class="unit">kg</span>
+                        </div>
+                        <div class="widget-trend positive">↗ +12% from yesterday</div>
+                    </div>
+
+                    <div class="stat-widget">
+                        <h3>System Efficiency</h3>
+                        <div class="widget-value">
+                            <span class="realtime-counter">94.7</span>
+                            <span class="unit">%</span>
+                        </div>
+                        <div class="widget-trend positive">↗ Optimal range</div>
+                    </div>
+
+                    <div class="stat-widget">
+                        <h3>Energy Usage</h3>
+                        <div class="widget-value">
+                            <span class="realtime-counter">2.847</span>
+                            <span class="unit">kW</span>
+                        </div>
+                        <div class="widget-trend neutral">→ Stable consumption</div>
+                    </div>
+
+                    <div class="stat-widget">
+                        <h3>Output Quality</h3>
+                        <div class="widget-value">
+                            <span class="realtime-counter">98.2</span>
+                            <span class="unit">%</span>
+                        </div>
+                        <div class="widget-trend positive">↗ Above specification</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="control-section">
+                <div class="control-panel">
+                    <h3>Data Filters</h3>
+                    <div class="filter-controls">
+                        <button class="filter-btn active" data-category="all">All Categories</button>
+                        <button class="filter-btn" data-category="fabrics">Fabrics</button>
+                        <button class="filter-btn" data-category="packaging">Packaging</button>
+                        <button class="filter-btn" data-category="eva">EVA Waste</button>
+                        <button class="filter-btn" data-category="aluminum">Aluminum</button>
+                        <button class="filter-btn" data-category="foam">Foam</button>
+                    </div>
+
+                    <div class="time-controls">
+                        <label for="timeRange">Time Range:</label>
+                        <select id="timeRange" class="time-select">
+                            <option value="today">Today</option>
+                            <option value="week">Last Week</option>
+                            <option value="month" selected>Last Month</option>
+                            <option value="all">Mission Total</option>
+                        </select>
+                    </div>
+
+                    <div class="search-controls">
+                        <input type="text" class="search-input" placeholder="Search data..." />
+                    </div>
+                </div>
+            </section>
+
+            <section class="charts-section">
+                <div class="charts-grid">
+                    <div class="chart-container large">
+                        <h3 class="chart-title">Waste Category Breakdown</h3>
+                        <canvas id="wasteChart"></canvas>
+                        <div class="chart-details">
+                            <div class="detail-item">
+                                <span class="color-indicator" style="background: #a83232;"></span>
+                                <span>Fabrics: 3,150 kg (25%)</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="color-indicator" style="background: #ffcc66;"></span>
+                                <span>Packaging: 3,780 kg (30%)</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="color-indicator" style="background: #4a90e2;"></span>
+                                <span>EVA Waste: 1,890 kg (15%)</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="color-indicator" style="background: #27ae60;"></span>
+                                <span>Aluminum: 1,260 kg (10%)</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="color-indicator" style="background: #e74c3c;"></span>
+                                <span>Foam: 2,520 kg (20%)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h3 class="chart-title">Processing Efficiency</h3>
+                        <canvas id="efficiencyChart"></canvas>
+                        <div class="efficiency-details">
+                            <div class="efficiency-stat">
+                                <span class="stat-label">Recycled Material</span>
+                                <span class="stat-value mars-green">9,800 kg</span>
+                            </div>
+                            <div class="efficiency-stat">
+                                <span class="stat-label">Waste Remaining</span>
+                                <span class="stat-value mars-red">2,800 kg</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container large">
+                        <h3 class="chart-title">Input vs Output Production</h3>
+                        <canvas id="outputChart"></canvas>
+                        <div class="output-legend">
+                            <div class="legend-item">
+                                <span class="legend-color input"></span>
+                                <span>Waste Input (kg)</span>
+                            </div>
+                            <div class="legend-item">
+                                <span class="legend-color output"></span>
+                                <span>Product Output (units)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chart-container">
+                        <h3 class="chart-title">Daily Processing Trend</h3>
+                        <canvas id="trendChart"></canvas>
+                        <div class="trend-summary">
+                            <p>7-day average: <span class="mars-gold">42.8 kg/sol</span></p>
+                            <p>Peak day: <span class="mars-gold">Sol 1,243 (58.2 kg)</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="detailed-metrics">
+                <h2>Detailed Analytics</h2>
+
+                <div class="metrics-tabs">
+                    <button class="tab-btn active" data-tab="performance">Performance</button>
+                    <button class="tab-btn" data-tab="materials">Materials</button>
+                    <button class="tab-btn" data-tab="energy">Energy</button>
+                    <button class="tab-btn" data-tab="quality">Quality</button>
+                </div>
+
+                <div class="tab-content active" id="performance">
+                    <div class="performance-grid">
+                        <div class="performance-card">
+                            <h4>Processing Speed</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%;" data-value="85"></div>
+                                <span class="progress-text">85% of target</span>
+                            </div>
+                            <p>Current: 47.3 kg/sol | Target: 55.6 kg/sol</p>
+                        </div>
+
+                        <div class="performance-card">
+                            <h4>System Uptime</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 100%;" data-value="100"></div>
+                                <span class="progress-text">100% operational</span>
+                            </div>
+                            <p>1,247 sols continuous operation</p>
+                        </div>
+
+                        <div class="performance-card">
+                            <h4>Output Quality</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 98%;" data-value="98"></div>
+                                <span class="progress-text">98.2% grade A</span>
+                            </div>
+                            <p>Above mission specifications</p>
+                        </div>
+
+                        <div class="performance-card">
+                            <h4>Resource Recovery</h4>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 78%;" data-value="78"></div>
+                                <span class="progress-text">78% recovery rate</span>
+                            </div>
+                            <p>9,800 kg from 12,600 kg input</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="materials">
+                    <div class="materials-table">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Material Type</th>
+                                    <th>Input (kg)</th>
+                                    <th>Processed (kg)</th>
+                                    <th>Output (kg)</th>
+                                    <th>Efficiency</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr data-searchable="true">
+                                    <td>Fabric Materials</td>
+                                    <td>3,150</td>
+                                    <td>3,150</td>
+                                    <td>2,678</td>
+                                    <td><span class="efficiency-badge high">85%</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                </tr>
+                                <tr data-searchable="true">
+                                    <td>Food Packaging</td>
+                                    <td>3,780</td>
+                                    <td>3,780</td>
+                                    <td>2,722</td>
+                                    <td><span class="efficiency-badge medium">72%</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                </tr>
+                                <tr data-searchable="true">
+                                    <td>EVA Suit Components</td>
+                                    <td>1,890</td>
+                                    <td>1,890</td>
+                                    <td>1,285</td>
+                                    <td><span class="efficiency-badge medium">68%</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                </tr>
+                                <tr data-searchable="true">
+                                    <td>Aluminum Composites</td>
+                                    <td>1,260</td>
+                                    <td>1,260</td>
+                                    <td>1,147</td>
+                                    <td><span class="efficiency-badge high">91%</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                </tr>
+                                <tr data-searchable="true">
+                                    <td>Foam Packaging</td>
+                                    <td>2,520</td>
+                                    <td>2,520</td>
+                                    <td>2,218</td>
+                                    <td><span class="efficiency-badge high">88%</span></td>
+                                    <td><span class="status-badge active">Active</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="energy">
+                    <div class="energy-metrics">
+                        <div class="energy-card">
+                            <h4>Power Consumption</h4>
+                            <canvas id="energyChart" width="300" height="150"></canvas>
+                            <div class="energy-stats">
+                                <div class="energy-stat">
+                                    <span class="label">Current Draw:</span>
+                                    <span class="value">2.847 kW</span>
+                                </div>
+                                <div class="energy-stat">
+                                    <span class="label">Daily Total:</span>
+                                    <span class="value">68.3 kWh</span>
+                                </div>
+                                <div class="energy-stat">
+                                    <span class="label">Efficiency:</span>
+                                    <span class="value">16.6 kg/kWh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="energy-breakdown">
+                            <h4>Energy Distribution</h4>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">Processing Modules</span>
+                                <div class="breakdown-bar">
+                                    <div class="bar-fill" style="width: 45%;"></div>
+                                </div>
+                                <span class="breakdown-value">45%</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">Sorting Systems</span>
+                                <div class="breakdown-bar">
+                                    <div class="bar-fill" style="width: 25%;"></div>
+                                </div>
+                                <span class="breakdown-value">25%</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">Cleaning Units</span>
+                                <div class="breakdown-bar">
+                                    <div class="bar-fill" style="width: 20%;"></div>
+                                </div>
+                                <span class="breakdown-value">20%</span>
+                            </div>
+                            <div class="breakdown-item">
+                                <span class="breakdown-label">Support Systems</span>
+                                <div class="breakdown-bar">
+                                    <div class="bar-fill" style="width: 10%;"></div>
+                                </div>
+                                <span class="breakdown-value">10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="quality">
+                    <div class="quality-metrics">
+                        <div class="quality-overview">
+                            <div class="quality-score">
+                                <h4>Overall Quality Score</h4>
+                                <div class="score-circle">
+                                    <svg width="120" height="120">
+                                        <circle cx="60" cy="60" r="50" stroke="var(--mars-gray)" stroke-width="8"
+                                            fill="none" />
+                                        <circle cx="60" cy="60" r="50" stroke="var(--mars-green)" stroke-width="8"
+                                            fill="none" stroke-dasharray="314" stroke-dashoffset="31.4"
+                                            class="quality-ring" />
+                                    </svg>
+                                    <span class="score-text">98.2</span>
+                                </div>
+                                <p>Excellent Rating</p>
+                            </div>
+                        </div>
+
+                        <div class="quality-breakdown">
+                            <h4>Quality Metrics</h4>
+                            <div class="quality-grid">
+                                <div class="quality-item">
+                                    <span class="quality-label">Material Purity</span>
+                                    <span class="quality-value mars-green">99.1%</span>
+                                </div>
+                                <div class="quality-item">
+                                    <span class="quality-label">Structural Integrity</span>
+                                    <span class="quality-value mars-green">97.8%</span>
+                                </div>
+                                <div class="quality-item">
+                                    <span class="quality-label">Dimensional Accuracy</span>
+                                    <span class="quality-value mars-green">98.5%</span>
+                                </div>
+                                <div class="quality-item">
+                                    <span class="quality-label">Surface Finish</span>
+                                    <span class="quality-value mars-gold">96.2%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Data Refresh</h4>
+                    <p>Updated every 30 seconds</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Data Integrity</h4>
+                    <p>All systems verified</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Export Options</h4>
+                    <p>CSV, JSON formats available</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Dashboard-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function () {
+            // Initialize dashboard charts
+            initDashboardCharts();
+
+            // Setup tab switching
+            setupTabs();
+
+            // Setup real-time updates
+            setupRealTimeUpdates();
+
+            // Setup filter interactions
+            setupDashboardFilters();
+        });
+
+        function initDashboardCharts() {
+            // Trend Chart
+            const trendCtx = document.getElementById('trendChart').getContext('2d');
+            new Chart(trendCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Sol 1241', 'Sol 1242', 'Sol 1243', 'Sol 1244', 'Sol 1245', 'Sol 1246', 'Sol 1247'],
+                    datasets: [{
+                        label: 'Daily Processing (kg)',
+                        data: [38.5, 42.1, 58.2, 45.7, 41.3, 39.8, 47.3],
+                        borderColor: '#ffcc66',
+                        backgroundColor: 'rgba(255, 204, 102, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#ffffff' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        x: {
+                            ticks: { color: '#ffffff' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: '#ffffff' }
+                        }
+                    }
+                }
+            });
+
+            // Energy Chart (simplified line chart)
+            const energyCtx = document.getElementById('energyChart').getContext('2d');
+            new Chart(energyCtx, {
+                type: 'line',
+                data: {
+                    labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '24:00'],
+                    datasets: [{
+                        label: 'Power (kW)',
+                        data: [2.1, 2.3, 3.2, 3.8, 3.1, 2.7, 2.4],
+                        borderColor: '#4a90e2',
+                        backgroundColor: 'rgba(74, 144, 226, 0.1)',
+                        borderWidth: 2,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#ffffff',
+                                font: { size: 10 }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#ffffff',
+                                font: { size: 10 }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+        function setupTabs() {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                    // Remove active class from all tabs and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding content
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        }
+
+        function setupRealTimeUpdates() {
+            setInterval(() => {
+                // Update real-time counters with slight variations
+                const counters = document.querySelectorAll('.realtime-counter');
+                counters.forEach(counter => {
+                    const currentValue = parseFloat(counter.textContent);
+                    const variation = (Math.random() - 0.5) * 0.5; // ±0.25 variation
+                    const newValue = Math.max(0, currentValue + variation);
+                    counter.textContent = newValue.toFixed(1);
+                });
+            }, 5000);
+        }
+
+        function setupDashboardFilters() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const timeSelect = document.getElementById('timeRange');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const category = button.getAttribute('data-category');
+                    filterDashboardData(category);
+                });
+            });
+
+            timeSelect.addEventListener('change', (e) => {
+                updateTimeRange(e.target.value);
+            });
+        }
+
+        function filterDashboardData(category) {
+            // Update charts and data based on selected category
+            console.log('Filtering dashboard data for category:', category);
+
+            // Here you would typically update charts with filtered data
+            // For demonstration, we'll just highlight relevant table rows
+            const tableRows = document.querySelectorAll('tbody tr');
+            tableRows.forEach(row => {
+                const materialType = row.querySelector('td').textContent.toLowerCase();
+                if (category === 'all' || materialType.includes(category)) {
+                    row.style.opacity = '1';
+                    row.style.display = 'table-row';
+                } else {
+                    row.style.opacity = '0.3';
+                    row.style.display = category === 'all' ? 'table-row' : 'none';
+                }
+            });
+        }
+
+        function updateTimeRange(range) {
+            console.log('Updating time range to:', range);
+            // Here you would update all charts with data for the selected time range
+        }
+    </script>
+
+    <style>
+        /* Dashboard-specific styles */
+        .dashboard-header {
+            background: linear-gradient(135deg, var(--mars-dark) 0%, var(--mars-gray) 100%);
+            padding: 3rem 2rem 2rem;
+        }
+
+        .header-content {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header-content h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--mars-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+        }
+
+        .realtime-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .stat-widget {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-widget:hover {
+            border-color: var(--mars-gold);
+            transform: translateY(-2px);
+        }
+
+        .stat-widget h3 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .widget-value {
+            margin-bottom: 0.5rem;
+        }
+
+        .widget-value .realtime-counter {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .widget-value .unit {
+            font-size: 1rem;
+            color: var(--text-dim);
+            margin-left: 0.25rem;
+        }
+
+        .widget-trend {
+            font-size: 0.85rem;
+        }
+
+        .widget-trend.positive {
+            color: var(--mars-green);
+        }
+
+        .widget-trend.negative {
+            color: var(--mars-red);
+        }
+
+        .widget-trend.neutral {
+            color: var(--text-dim);
+        }
+
+        .control-section {
+            padding: 2rem;
+            background: rgba(28, 28, 28, 0.5);
+        }
+
+        .control-panel {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .control-panel h3 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .filter-controls {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .time-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .time-controls label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .time-select {
+            background: var(--mars-dark);
+            border: 1px solid var(--mars-red);
+            color: var(--text-light);
+            padding: 0.5rem;
+            border-radius: 4px;
+            font-family: var(--font-body);
+        }
+
+        .search-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .charts-section {
+            padding: 2rem;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .chart-container.large {
+            grid-column: span 2;
+        }
+
+        .chart-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .color-indicator {
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+
+        .efficiency-details {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .efficiency-stat {
+            text-align: center;
+        }
+
+        .stat-label {
+            display: block;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-value {
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .output-legend {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .legend-color {
+            width: 16px;
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        .legend-color.input {
+            background: var(--mars-red);
+        }
+
+        .legend-color.output {
+            background: var(--mars-gold);
+        }
+
+        .trend-summary {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .trend-summary p {
+            margin: 0.25rem 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .detailed-metrics {
+            padding: 4rem 2rem;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+        .detailed-metrics h2 {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+        }
+
+        .metrics-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .tab-btn {
+            background: var(--mars-gray);
+            border: 1px solid var(--mars-red);
+            color: var(--text-gray);
+            padding: 1rem 2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-body);
+            border-right: none;
+        }
+
+        .tab-btn:first-child {
+            border-top-left-radius: var(--border-radius);
+            border-bottom-left-radius: var(--border-radius);
+        }
+
+        .tab-btn:last-child {
+            border-top-right-radius: var(--border-radius);
+            border-bottom-right-radius: var(--border-radius);
+            border-right: 1px solid var(--mars-red);
+        }
+
+        .tab-btn.active,
+        .tab-btn:hover {
+            background: var(--mars-red);
+            color: var(--text-light);
+        }
+
+        .tab-content {
+            display: none;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .performance-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .performance-card {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+        }
+
+        .performance-card h4 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            background: rgba(28, 28, 28, 0.8);
+            height: 24px;
+            border-radius: 12px;
+            position: relative;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--mars-red), var(--mars-gold));
+            border-radius: 12px;
+            transition: width 1s ease-out;
+            position: relative;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-light);
+            z-index: 2;
+        }
+
+        .performance-card p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(44, 44, 44, 0.8);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .data-table th {
+            background: var(--mars-red);
+            color: var(--text-light);
+            font-weight: 600;
+        }
+
+        .data-table td {
+            color: var(--text-gray);
+        }
+
+        .efficiency-badge,
+        .status-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .efficiency-badge.high {
+            background: var(--mars-green);
+            color: var(--mars-dark);
+        }
+
+        .efficiency-badge.medium {
+            background: var(--mars-gold);
+            color: var(--mars-dark);
+        }
+
+        .efficiency-badge.low {
+            background: var(--mars-red);
+            color: var(--text-light);
+        }
+
+        .status-badge.active {
+            background: var(--mars-green);
+            color: var(--mars-dark);
+        }
+
+        .energy-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .energy-card {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+        }
+
+        .energy-card h4 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+        }
+
+        .energy-stats {
+            margin-top: 1rem;
+        }
+
+        .energy-stat {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .energy-stat .label {
+            color: var(--text-gray);
+        }
+
+        .energy-stat .value {
+            color: var(--mars-gold);
+            font-weight: 600;
+        }
+
+        .energy-breakdown {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+        }
+
+        .energy-breakdown h4 {
+            color: var(--mars-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .breakdown-item {
+            display: grid;
+            grid-template-columns: 1fr 2fr auto;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .breakdown-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .breakdown-bar {
+            background: rgba(28, 28, 28, 0.8);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--mars-gold);
+            border-radius: 4px;
+            transition: width 1s ease-out;
+        }
+
+        .breakdown-value {
+            color: var(--mars-gold);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .quality-metrics {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .quality-overview {
+            text-align: center;
+        }
+
+        .quality-score h4 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+        }
+
+        .score-circle {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .score-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--mars-green);
+        }
+
+        .quality-breakdown {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+        }
+
+        .quality-breakdown h4 {
+            color: var(--mars-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .quality-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: rgba(28, 28, 28, 0.6);
+            border-radius: 6px;
+        }
+
+        .quality-label {
+            color: var(--text-gray);
+        }
+
+        .quality-value {
+            font-weight: 600;
+            font-family: var(--font-display);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .chart-container.large {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .control-panel {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .realtime-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .metrics-tabs {
+                flex-wrap: wrap;
+            }
+
+            .tab-btn {
+                flex: 1;
+                min-width: 120px;
+            }
+
+            .energy-metrics,
+            .quality-metrics {
+                grid-template-columns: 1fr;
+            }
+
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .realtime-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+
+</html>

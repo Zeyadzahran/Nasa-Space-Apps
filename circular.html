@@ -1,0 +1,1622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Economy - Mars Waste Recycling System</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1>MARS-WRS</h1>
+                    <span class="mission-code">JEZERO-2025</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="system.html" class="nav-link">System</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="scenarios.html" class="nav-link">Scenarios</a></li>
+                    <li><a href="circular.html" class="nav-link active">Circular Economy</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+                <div class="mission-status">
+                    <span class="status-indicator active"></span>
+                    <span>CYCLE ACTIVE</span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="circular-header">
+                <div class="header-content">
+                    <h1>Mars Circular Economy</h1>
+                    <p>Closed-loop resource management for sustainable Mars colonization</p>
+                    <div class="philosophy">
+                        <h2>"Nothing Wasted on Mars"</h2>
+                        <p>Every gram of material serves multiple purposes throughout its lifecycle</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="circular-principles">
+                <h2>Circular Economy Principles</h2>
+                <div class="principles-grid">
+                    <div class="principle-card">
+                        <div class="principle-icon">♻️</div>
+                        <h3>Regenerative Design</h3>
+                        <p>Design out waste and pollution from the start, keeping materials in use at their highest
+                            value for as long as possible.</p>
+                        <div class="principle-stats">
+                            <span class="stat">98% material recovery</span>
+                            <span class="stat">Zero toxic waste</span>
+                        </div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🔄</div>
+                        <h3>Keep Products in Use</h3>
+                        <p>Maximize the lifespan of products through reuse, repair, refurbishment, and sharing before
+                            recycling.</p>
+                        <div class="principle-stats">
+                            <span class="stat">5x product lifespan</span>
+                            <span class="stat">78% reuse rate</span>
+                        </div>
+                    </div>
+
+                    <div class="principle-card">
+                        <div class="principle-icon">🌱</div>
+                        <h3>Regenerate Natural Systems</h3>
+                        <p>Create beneficial cycles that restore and regenerate the Martian environment while supporting
+                            human life.</p>
+                        <div class="principle-stats">
+                            <span class="stat">40% habitat enhancement</span>
+                            <span class="stat">Zero emissions</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="circular-flow">
+                <h2>Mars Circular Flow Diagram</h2>
+                <p class="flow-description">Interactive visualization of material flows in the Mars circular economy</p>
+
+                <div class="flow-container">
+                    <div class="circular-diagram">
+                        <!-- Central Mars Icon -->
+                        <div class="mars-center">
+                            <div class="mars-icon">🔴</div>
+                            <span class="mars-label">MARS<br>ECOSYSTEM</span>
+                        </div>
+
+                        <!-- Primary Flow Stages -->
+                        <div class="flow-stage stage-1" data-stage="extraction">
+                            <div class="stage-icon">⛏️</div>
+                            <h4>Resource Extraction</h4>
+                            <p>Mission supplies, equipment waste, and atmospheric resources</p>
+                            <div class="stage-metrics">
+                                <span>12.6 tons/year</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-stage stage-2" data-stage="processing">
+                            <div class="stage-icon">🏭</div>
+                            <h4>Smart Processing</h4>
+                            <p>Advanced recycling and material transformation systems</p>
+                            <div class="stage-metrics">
+                                <span>94% efficiency</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-stage stage-3" data-stage="manufacturing">
+                            <div class="stage-icon">🔧</div>
+                            <h4>Local Manufacturing</h4>
+                            <p>On-demand production of tools, habitats, and equipment</p>
+                            <div class="stage-metrics">
+                                <span>9.8 tons output</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-stage stage-4" data-stage="use">
+                            <div class="stage-icon">🏠</div>
+                            <h4>Mission Use</h4>
+                            <p>Products serve mission objectives across multiple applications</p>
+                            <div class="stage-metrics">
+                                <span>3+ lifecycles</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-stage stage-5" data-stage="maintenance">
+                            <div class="stage-icon">🔨</div>
+                            <h4>Maintenance & Repair</h4>
+                            <p>Extend product life through repair and refurbishment</p>
+                            <div class="stage-metrics">
+                                <span>2.5x lifespan</span>
+                            </div>
+                        </div>
+
+                        <div class="flow-stage stage-6" data-stage="collection">
+                            <div class="stage-icon">📦</div>
+                            <h4>End-of-Life Collection</h4>
+                            <p>Systematic collection and sorting for next lifecycle</p>
+                            <div class="stage-metrics">
+                                <span>100% capture</span>
+                            </div>
+                        </div>
+
+                        <!-- Flow Arrows -->
+                        <div class="flow-arrows">
+                            <div class="circular-arrow arrow-1"></div>
+                            <div class="circular-arrow arrow-2"></div>
+                            <div class="circular-arrow arrow-3"></div>
+                            <div class="circular-arrow arrow-4"></div>
+                            <div class="circular-arrow arrow-5"></div>
+                            <div class="circular-arrow arrow-6"></div>
+                        </div>
+
+                        <!-- Inner Loops -->
+                        <div class="inner-loop reuse-loop">
+                            <div class="loop-label">REUSE</div>
+                        </div>
+                        <div class="inner-loop repair-loop">
+                            <div class="loop-label">REPAIR</div>
+                        </div>
+                        <div class="inner-loop recycle-loop">
+                            <div class="loop-label">RECYCLE</div>
+                        </div>
+                    </div>
+
+                    <div class="flow-controls">
+                        <h3>Explore Flow Stages</h3>
+                        <div class="stage-buttons">
+                            <button class="stage-btn active" data-target="extraction">Resource Extraction</button>
+                            <button class="stage-btn" data-target="processing">Processing</button>
+                            <button class="stage-btn" data-target="manufacturing">Manufacturing</button>
+                            <button class="stage-btn" data-target="use">Mission Use</button>
+                            <button class="stage-btn" data-target="maintenance">Maintenance</button>
+                            <button class="stage-btn" data-target="collection">Collection</button>
+                        </div>
+
+                        <div class="stage-details">
+                            <div class="stage-detail active" id="detail-extraction">
+                                <h4>Resource Extraction Phase</h4>
+                                <ul>
+                                    <li>Mission supply waste: 8,600 kg/year</li>
+                                    <li>Equipment end-of-life: 2,400 kg/year</li>
+                                    <li>Atmospheric CO₂ capture: 1,600 kg/year</li>
+                                    <li>Regolith processing: continuous</li>
+                                </ul>
+                                <p>Zero-extraction principle: Maximize existing material utilization before requiring
+                                    new Earth shipments.</p>
+                            </div>
+
+                            <div class="stage-detail" id="detail-processing">
+                                <h4>Smart Processing Systems</h4>
+                                <ul>
+                                    <li>Molecular-level material identification</li>
+                                    <li>Automated sorting and cleaning</li>
+                                    <li>Non-toxic transformation processes</li>
+                                    <li>Energy-efficient operation</li>
+                                </ul>
+                                <p>Advanced recycling achieves 94% material recovery through precision processing.</p>
+                            </div>
+
+                            <div class="stage-detail" id="detail-manufacturing">
+                                <h4>Local Manufacturing Hub</h4>
+                                <ul>
+                                    <li>3D printing and additive manufacturing</li>
+                                    <li>Modular design for easy disassembly</li>
+                                    <li>On-demand production reducing storage</li>
+                                    <li>Quality-first approach</li>
+                                </ul>
+                                <p>Distributed manufacturing reduces waste and enables custom solutions for Mars
+                                    challenges.</p>
+                            </div>
+
+                            <div class="stage-detail" id="detail-use">
+                                <h4>Multi-Purpose Mission Use</h4>
+                                <ul>
+                                    <li>Average 3+ functions per product</li>
+                                    <li>Modular components for flexibility</li>
+                                    <li>Shared resource pools</li>
+                                    <li>Efficient space utilization</li>
+                                </ul>
+                                <p>Products designed for maximum utility across different mission phases and
+                                    applications.</p>
+                            </div>
+
+                            <div class="stage-detail" id="detail-maintenance">
+                                <h4>Proactive Maintenance Culture</h4>
+                                <ul>
+                                    <li>Preventive maintenance scheduling</li>
+                                    <li>Crew training in repair techniques</li>
+                                    <li>Spare parts from recycled materials</li>
+                                    <li>Upgrade pathways for older equipment</li>
+                                </ul>
+                                <p>Maintenance extends product life by 250% while building crew self-sufficiency.</p>
+                            </div>
+
+                            <div class="stage-detail" id="detail-collection">
+                                <h4>Systematic Collection Network</h4>
+                                <ul>
+                                    <li>100% material tracking and collection</li>
+                                    <li>Contamination prevention protocols</li>
+                                    <li>Automated sorting systems</li>
+                                    <li>Quality preservation during storage</li>
+                                </ul>
+                                <p>Complete material recovery ensures no resources are permanently lost to the system.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="circular-metrics">
+                <h2>Circular Performance Metrics</h2>
+
+                <div class="metrics-dashboard">
+                    <div class="metric-category">
+                        <h3>Material Flows</h3>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <span class="metric-icon">📊</span>
+                                    <h4>Circularity Rate</h4>
+                                </div>
+                                <div class="metric-value">
+                                    <span class="value-number">87.3</span>
+                                    <span class="value-unit">%</span>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 87.3%"></div>
+                                    </div>
+                                    <span class="progress-label">Target: 90%</span>
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <span class="metric-icon">🔄</span>
+                                    <h4>Material Retention</h4>
+                                </div>
+                                <div class="metric-value">
+                                    <span class="value-number">94.7</span>
+                                    <span class="value-unit">%</span>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 94.7%"></div>
+                                    </div>
+                                    <span class="progress-label">Exceeding target</span>
+                                </div>
+                            </div>
+
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <span class="metric-icon">⚡</span>
+                                    <h4>Energy Efficiency</h4>
+                                </div>
+                                <div class="metric-value">
+                                    <span class="value-number">16.6</span>
+                                    <span class="value-unit">kg/kWh</span>
+                                </div>
+                                <div class="metric-progress">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 83%"></div>
+                                    </div>
+                                    <span class="progress-label">High efficiency</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-category">
+                        <h3>Economic Impact</h3>
+                        <div class="economic-chart">
+                            <canvas id="economicChart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="economic-stats">
+                            <div class="economic-stat">
+                                <span class="stat-label">Cost Savings</span>
+                                <span class="stat-value">$127M</span>
+                                <span class="stat-description">Avoided Earth shipment costs</span>
+                            </div>
+                            <div class="economic-stat">
+                                <span class="stat-label">Resource Autonomy</span>
+                                <span class="stat-value">78%</span>
+                                <span class="stat-description">Self-sufficiency achieved</span>
+                            </div>
+                            <div class="economic-stat">
+                                <span class="stat-label">Mission Extension</span>
+                                <span class="stat-value">+2.3</span>
+                                <span class="stat-description">Years enabled by recycling</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lifecycle-examples">
+                <h2>Material Lifecycle Examples</h2>
+                <p>Track how specific materials travel through multiple lifecycles in the Mars economy</p>
+
+                <div class="lifecycle-grid">
+                    <div class="lifecycle-card">
+                        <div class="lifecycle-header">
+                            <h3>Aluminum Journey</h3>
+                            <span class="lifecycle-duration">18 Months Active</span>
+                        </div>
+
+                        <div class="lifecycle-timeline">
+                            <div class="lifecycle-stage completed">
+                                <div class="stage-marker">1</div>
+                                <div class="stage-content">
+                                    <h4>Initial Use: Equipment Housing</h4>
+                                    <p>Sol 1-180: Protective casing for communication equipment</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage completed">
+                                <div class="stage-marker">2</div>
+                                <div class="stage-content">
+                                    <h4>First Recycling: Structural Reinforcement</h4>
+                                    <p>Sol 180-420: Melted and reformed into habitat support beams</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage completed">
+                                <div class="stage-marker">3</div>
+                                <div class="stage-content">
+                                    <h4>Second Lifecycle: Tool Manufacturing</h4>
+                                    <p>Sol 420-680: Processed into maintenance tools and spare parts</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage active">
+                                <div class="stage-marker">4</div>
+                                <div class="stage-content">
+                                    <h4>Current Use: Container System</h4>
+                                    <p>Sol 680-present: Formed into modular storage containers</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage future">
+                                <div class="stage-marker">5</div>
+                                <div class="stage-content">
+                                    <h4>Planned: Scientific Equipment</h4>
+                                    <p>Sol 900+: Next transformation into research instrument casings</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lifecycle-stats">
+                            <div class="lifecycle-stat">
+                                <span class="stat-number">91%</span>
+                                <span class="stat-label">Material Retained</span>
+                            </div>
+                            <div class="lifecycle-stat">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Lifecycles Completed</span>
+                            </div>
+                            <div class="lifecycle-stat">
+                                <span class="stat-number">2+</span>
+                                <span class="stat-label">Years Remaining</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lifecycle-card">
+                        <div class="lifecycle-header">
+                            <h3>Fabric Evolution</h3>
+                            <span class="lifecycle-duration">24 Months Active</span>
+                        </div>
+
+                        <div class="lifecycle-timeline">
+                            <div class="lifecycle-stage completed">
+                                <div class="stage-marker">1</div>
+                                <div class="stage-content">
+                                    <h4>Original: EVA Suit Components</h4>
+                                    <p>Sol 1-300: Outer layer fabric from spacewalk suits</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage completed">
+                                <div class="stage-marker">2</div>
+                                <div class="stage-content">
+                                    <h4>Reconfigured: Habitat Insulation</h4>
+                                    <p>Sol 300-650: Processed into thermal insulation panels</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage completed">
+                                <div class="stage-marker">3</div>
+                                <div class="stage-content">
+                                    <h4>Repurposed: Celebration Decorations</h4>
+                                    <p>Sol 650-820: Transformed into banners and ceremonial items</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage active">
+                                <div class="stage-marker">4</div>
+                                <div class="stage-content">
+                                    <h4>Current: Protective Covers</h4>
+                                    <p>Sol 820-present: Equipment protection and dust shields</p>
+                                </div>
+                            </div>
+
+                            <div class="lifecycle-stage future">
+                                <div class="stage-marker">5</div>
+                                <div class="stage-content">
+                                    <h4>Final: Composite Reinforcement</h4>
+                                    <p>Sol 1100+: Fiber reinforcement for construction materials</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="lifecycle-stats">
+                            <div class="lifecycle-stat">
+                                <span class="stat-number">85%</span>
+                                <span class="stat-label">Material Retained</span>
+                            </div>
+                            <div class="lifecycle-stat">
+                                <span class="stat-number">4</span>
+                                <span class="stat-label">Lifecycles Completed</span>
+                            </div>
+                            <div class="lifecycle-stat">
+                                <span class="stat-number">1+</span>
+                                <span class="stat-label">Years Remaining</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="future-vision">
+                <h2>Future Mars Circular Economy</h2>
+                <div class="vision-content">
+                    <div class="vision-text">
+                        <h3>Scaling for Permanent Settlement</h3>
+                        <p>As Mars colonies grow, the circular economy model becomes even more critical. Our current
+                            system serves as the foundation for a fully sustainable Mars civilization.</p>
+
+                        <div class="vision-goals">
+                            <div class="goal-item">
+                                <span class="goal-icon">🏙️</span>
+                                <div class="goal-content">
+                                    <h4>Colony-Scale Implementation</h4>
+                                    <p>Expand circular systems to support 1000+ person settlements with 95%+ circularity
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <span class="goal-icon">🚀</span>
+                                <div class="goal-content">
+                                    <h4>Interplanetary Resource Network</h4>
+                                    <p>Create resource exchange systems between Mars, asteroid mining, and Earth</p>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <span class="goal-icon">🔬</span>
+                                <div class="goal-content">
+                                    <h4>Advanced Material Science</h4>
+                                    <p>Develop new materials and processes optimized for circular Mars economy</p>
+                                </div>
+                            </div>
+
+                            <div class="goal-item">
+                                <span class="goal-icon">🌍</span>
+                                <div class="goal-content">
+                                    <h4>Earth Application</h4>
+                                    <p>Transfer Mars circular economy innovations back to Earth sustainability</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vision-timeline">
+                        <h3>Development Roadmap</h3>
+                        <div class="roadmap">
+                            <div class="roadmap-phase completed">
+                                <div class="phase-year">2025</div>
+                                <div class="phase-content">
+                                    <h4>Foundation Phase</h4>
+                                    <p>Current 8-person mission achieving 78% circularity</p>
+                                </div>
+                            </div>
+
+                            <div class="roadmap-phase active">
+                                <div class="phase-year">2027</div>
+                                <div class="phase-content">
+                                    <h4>Optimization Phase</h4>
+                                    <p>Scale to 25-person crew with 90% circularity target</p>
+                                </div>
+                            </div>
+
+                            <div class="roadmap-phase future">
+                                <div class="phase-year">2030</div>
+                                <div class="phase-content">
+                                    <h4>Expansion Phase</h4>
+                                    <p>100-person settlement with closed-loop systems</p>
+                                </div>
+                            </div>
+
+                            <div class="roadmap-phase future">
+                                <div class="phase-year">2035</div>
+                                <div class="phase-content">
+                                    <h4>Maturation Phase</h4>
+                                    <p>1000+ person city with 98% resource circularity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Circular Performance</h4>
+                    <p>87.3% circularity rate achieved</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Zero Waste Goal</h4>
+                    <p>Target: 95% by Sol 1,500</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Innovation Hub</h4>
+                    <p>Advancing sustainable space economy</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            initCircularPage();
+        });
+
+        function initCircularPage() {
+            setupStageButtons();
+            initEconomicChart();
+            animateCircularFlow();
+            setupInteractiveElements();
+        }
+
+        function setupStageButtons() {
+            const stageButtons = document.querySelectorAll('.stage-btn');
+            const stageDetails = document.querySelectorAll('.stage-detail');
+
+            stageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const target = button.getAttribute('data-target');
+
+                    // Update button states
+                    stageButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    // Update detail content
+                    stageDetails.forEach(detail => detail.classList.remove('active'));
+                    document.getElementById(`detail-${target}`).classList.add('active');
+
+                    // Highlight corresponding stage in diagram
+                    const flowStages = document.querySelectorAll('.flow-stage');
+                    flowStages.forEach(stage => stage.classList.remove('highlighted'));
+                    document.querySelector(`[data-stage="${target}"]`).classList.add('highlighted');
+                });
+            });
+        }
+
+        function initEconomicChart() {
+            const ctx = document.getElementById('economicChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Sol 0', 'Sol 300', 'Sol 600', 'Sol 900', 'Sol 1200', 'Sol 1247'],
+                    datasets: [{
+                        label: 'Cost Savings ($M)',
+                        data: [0, 25, 52, 78, 105, 127],
+                        borderColor: '#ffcc66',
+                        backgroundColor: 'rgba(255, 204, 102, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }, {
+                        label: 'Resource Autonomy (%)',
+                        data: [15, 35, 52, 68, 75, 78],
+                        borderColor: '#27ae60',
+                        backgroundColor: 'rgba(39, 174, 96, 0.1)',
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                color: '#ffffff',
+                                font: { size: 11 }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        },
+                        x: {
+                            ticks: {
+                                color: '#ffffff',
+                                font: { size: 11 }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: '#ffffff',
+                                font: { size: 11 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function animateCircularFlow() {
+            const arrows = document.querySelectorAll('.circular-arrow');
+            arrows.forEach((arrow, index) => {
+                arrow.style.animationDelay = `${index * 0.5}s`;
+            });
+        }
+
+        function setupInteractiveElements() {
+            // Add hover effects to flow stages
+            const flowStages = document.querySelectorAll('.flow-stage');
+            flowStages.forEach(stage => {
+                stage.addEventListener('mouseenter', () => {
+                    stage.classList.add('highlighted');
+                });
+
+                stage.addEventListener('mouseleave', () => {
+                    if (!stage.classList.contains('active')) {
+                        stage.classList.remove('highlighted');
+                    }
+                });
+            });
+
+            // Animate progress bars
+            setTimeout(() => {
+                const progressBars = document.querySelectorAll('.progress-fill');
+                progressBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            }, 1000);
+        }
+    </script>
+
+    <style>
+        /* Circular Economy specific styles */
+        .circular-header {
+            background:
+                radial-gradient(circle at 30% 40%, rgba(168, 50, 50, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 204, 102, 0.2) 0%, transparent 50%),
+                linear-gradient(135deg, var(--mars-dark) 0%, #2c1810 50%, var(--mars-gray) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .header-content h1 {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+        }
+
+        .header-content>p {
+            font-size: 1.4rem;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+        }
+
+        .philosophy {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--mars-red);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .philosophy h2 {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            color: var(--mars-red);
+            margin-bottom: 1rem;
+        }
+
+        .philosophy p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .circular-principles {
+            padding: 4rem 2rem;
+        }
+
+        .circular-principles h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .principle-card {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--mars-red);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .principle-card:hover {
+            border-color: var(--mars-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .principle-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .principle-card h3 {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .principle-card p {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .principle-stats {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .principle-stats .stat {
+            background: rgba(168, 50, 50, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--mars-gold);
+            font-weight: 600;
+        }
+
+        .circular-flow {
+            padding: 4rem 2rem;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+        .circular-flow h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .flow-description {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .flow-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .circular-diagram {
+            position: relative;
+            aspect-ratio: 1;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .mars-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: radial-gradient(circle, rgba(168, 50, 50, 0.3), transparent);
+            padding: 2rem;
+            border-radius: 50%;
+            border: 3px solid var(--mars-red);
+        }
+
+        .mars-icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .mars-label {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            font-weight: 700;
+            font-size: 0.9rem;
+            line-height: 1.2;
+        }
+
+        .flow-stage {
+            position: absolute;
+            width: 120px;
+            padding: 1rem;
+            background: rgba(44, 44, 44, 0.9);
+            border: 2px solid var(--mars-red);
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .flow-stage:hover,
+        .flow-stage.highlighted {
+            border-color: var(--mars-gold);
+            background: rgba(255, 204, 102, 0.1);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+
+        .stage-1 {
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .stage-2 {
+            top: 25%;
+            right: 5%;
+        }
+
+        .stage-3 {
+            bottom: 25%;
+            right: 5%;
+        }
+
+        .stage-4 {
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .stage-5 {
+            bottom: 25%;
+            left: 5%;
+        }
+
+        .stage-6 {
+            top: 25%;
+            left: 5%;
+        }
+
+        .stage-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .flow-stage h4 {
+            font-size: 0.8rem;
+            color: var(--mars-gold);
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .flow-stage p {
+            font-size: 0.6rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
+
+        .stage-metrics {
+            font-size: 0.7rem;
+            color: var(--mars-red);
+            font-weight: 600;
+        }
+
+        .circular-arrow {
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--mars-gold);
+            animation: flowPulse 3s ease-in-out infinite;
+        }
+
+        .circular-arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -4px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid var(--mars-gold);
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+        }
+
+        .arrow-1 {
+            top: 20%;
+            right: 25%;
+            transform: rotate(30deg);
+        }
+
+        .arrow-2 {
+            top: 45%;
+            right: 15%;
+            transform: rotate(90deg);
+        }
+
+        .arrow-3 {
+            bottom: 20%;
+            right: 25%;
+            transform: rotate(150deg);
+        }
+
+        .arrow-4 {
+            bottom: 20%;
+            left: 25%;
+            transform: rotate(210deg);
+        }
+
+        .arrow-5 {
+            top: 45%;
+            left: 15%;
+            transform: rotate(270deg);
+        }
+
+        .arrow-6 {
+            top: 20%;
+            left: 25%;
+            transform: rotate(330deg);
+        }
+
+        .inner-loop {
+            position: absolute;
+            border: 2px dashed rgba(255, 204, 102, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reuse-loop {
+            width: 180px;
+            height: 180px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .repair-loop {
+            width: 240px;
+            height: 240px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .recycle-loop {
+            width: 300px;
+            height: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .loop-label {
+            background: rgba(255, 204, 102, 0.1);
+            color: var(--mars-gold);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .flow-controls {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+        }
+
+        .flow-controls h3 {
+            color: var(--mars-gold);
+            margin-bottom: 1.5rem;
+            font-family: var(--font-display);
+        }
+
+        .stage-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stage-btn {
+            background: transparent;
+            border: 1px solid var(--mars-red);
+            color: var(--text-gray);
+            padding: 0.75rem 1rem;
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: var(--font-body);
+            border-radius: 4px;
+        }
+
+        .stage-btn:hover,
+        .stage-btn.active {
+            background: var(--mars-red);
+            color: var(--text-light);
+        }
+
+        .stage-details {
+            position: relative;
+            min-height: 200px;
+        }
+
+        .stage-detail {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stage-detail.active {
+            opacity: 1;
+        }
+
+        .stage-detail h4 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+        }
+
+        .stage-detail ul {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .stage-detail li {
+            margin-bottom: 0.5rem;
+        }
+
+        .stage-detail p {
+            color: var(--text-light);
+            font-style: italic;
+            background: rgba(168, 50, 50, 0.1);
+            padding: 1rem;
+            border-radius: 4px;
+            border-left: 4px solid var(--mars-gold);
+        }
+
+        .circular-metrics {
+            padding: 4rem 2rem;
+        }
+
+        .circular-metrics h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .metrics-dashboard {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .metric-category h3 {
+            color: var(--mars-gold);
+            margin-bottom: 2rem;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .metric-card {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+        }
+
+        .metric-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .metric-icon {
+            font-size: 1.5rem;
+        }
+
+        .metric-header h4 {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        .metric-value {
+            margin-bottom: 1rem;
+        }
+
+        .value-number {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--mars-gold);
+            font-weight: 700;
+        }
+
+        .value-unit {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-left: 0.25rem;
+        }
+
+        .metric-progress {
+            margin-top: 1rem;
+        }
+
+        .progress-label {
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .economic-chart {
+            height: 200px;
+            margin-bottom: 2rem;
+        }
+
+        .economic-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .economic-stat {
+            background: rgba(28, 28, 28, 0.8);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--mars-gold);
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-value {
+            color: var(--mars-gold);
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-description {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+        }
+
+        .lifecycle-examples {
+            padding: 4rem 2rem;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+        .lifecycle-examples h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .lifecycle-examples>p {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .lifecycle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .lifecycle-card {
+            background: rgba(44, 44, 44, 0.8);
+            border-radius: var(--border-radius);
+            border: 2px solid var(--mars-red);
+            overflow: hidden;
+        }
+
+        .lifecycle-header {
+            background: rgba(168, 50, 50, 0.2);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .lifecycle-header h3 {
+            color: var(--text-light);
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+        }
+
+        .lifecycle-duration {
+            background: var(--mars-gold);
+            color: var(--mars-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .lifecycle-timeline {
+            padding: 2rem;
+        }
+
+        .lifecycle-stage {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .lifecycle-stage::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            bottom: -15px;
+            width: 2px;
+            background: var(--mars-gray);
+        }
+
+        .lifecycle-stage:last-child::after {
+            display: none;
+        }
+
+        .lifecycle-stage.completed::after {
+            background: var(--mars-green);
+        }
+
+        .lifecycle-stage.active::after {
+            background: var(--mars-gold);
+        }
+
+        .stage-marker {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--mars-gray);
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .lifecycle-stage.completed .stage-marker {
+            background: var(--mars-green);
+            color: var(--mars-dark);
+        }
+
+        .lifecycle-stage.active .stage-marker {
+            background: var(--mars-gold);
+            color: var(--mars-dark);
+            animation: pulse 2s infinite;
+        }
+
+        .lifecycle-stage.future .stage-marker {
+            background: transparent;
+            border: 2px solid var(--mars-gray);
+        }
+
+        .stage-content h4 {
+            color: var(--mars-gold);
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .stage-content p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .lifecycle-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: 1.5rem;
+            background: rgba(28, 28, 28, 0.6);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .lifecycle-stat {
+            text-align: center;
+        }
+
+        .lifecycle-stat .stat-number {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--mars-gold);
+            font-weight: 700;
+            display: block;
+        }
+
+        .lifecycle-stat .stat-label {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        .future-vision {
+            padding: 4rem 2rem;
+        }
+
+        .future-vision h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .vision-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .vision-text h3 {
+            color: var(--mars-gold);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .vision-text>p {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .vision-goals {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .goal-item {
+            display: flex;
+            gap: 1rem;
+            background: rgba(44, 44, 44, 0.6);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--mars-gold);
+        }
+
+        .goal-icon {
+            font-size: 2rem;
+            min-width: 50px;
+            text-align: center;
+        }
+
+        .goal-content h4 {
+            color: var(--mars-gold);
+            margin-bottom: 0.5rem;
+        }
+
+        .goal-content p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .vision-timeline h3 {
+            color: var(--mars-gold);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .roadmap {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .roadmap::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--mars-green), var(--mars-gold), var(--mars-red));
+        }
+
+        .roadmap-phase {
+            position: relative;
+            padding-bottom: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .roadmap-phase::before {
+            content: '';
+            position: absolute;
+            left: -27px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--mars-gray);
+        }
+
+        .roadmap-phase.completed::before {
+            background: var(--mars-green);
+        }
+
+        .roadmap-phase.active::before {
+            background: var(--mars-gold);
+            animation: pulse 2s infinite;
+        }
+
+        .roadmap-phase.future::before {
+            background: var(--mars-red);
+        }
+
+        .phase-year {
+            color: var(--mars-gold);
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-content h4 {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+
+        .phase-content p {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .flow-container {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .vision-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lifecycle-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .lifecycle-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .goal-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .circular-diagram {
+                transform: scale(0.8);
+            }
+
+            .flow-stage {
+                width: 100px;
+                padding: 0.75rem;
+            }
+
+            .flow-stage h4 {
+                font-size: 0.7rem;
+            }
+
+            .flow-stage p {
+                font-size: 0.5rem;
+            }
+        }
+    </style>
+</body>
+
+</html>

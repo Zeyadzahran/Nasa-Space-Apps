@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Visualization - Mars Waste Recycling System</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Exo:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav class="navbar">
+                <div class="nav-brand">
+                    <h1>MARS-WRS</h1>
+                    <span class="mission-code">JEZERO-2025</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="system.html" class="nav-link active">System</a></li>
+                    <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                    <li><a href="scenarios.html" class="nav-link">Scenarios</a></li>
+                    <li><a href="circular.html" class="nav-link">Circular Economy</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                </ul>
+                <div class="mission-status">
+                    <span class="status-indicator active"></span>
+                    <span>SYSTEM ONLINE</span>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page-header">
+                <div class="header-content">
+                    <h1>Waste Processing System Visualization</h1>
+                    <p>Interactive flow diagrams showing waste transformation pathways from input to output</p>
+                </div>
+            </section>
+
+            <section class="system-overview">
+                <div class="flow-diagram">
+                    <h2>Mars Waste Processing Flow</h2>
+                    <div class="flow-container">
+                        <div class="flow-stage input-stage">
+                            <h3>Input Collection</h3>
+                            <div class="stage-items">
+                                <div class="flow-item waste-input" data-waste-type="fabrics">
+                                    <span class="item-icon">👕</span>
+                                    <span class="item-label">Fabrics</span>
+                                    <span class="item-amount">3,150 kg</span>
+                                </div>
+                                <div class="flow-item waste-input" data-waste-type="packaging">
+                                    <span class="item-icon">📦</span>
+                                    <span class="item-label">Packaging</span>
+                                    <span class="item-amount">3,780 kg</span>
+                                </div>
+                                <div class="flow-item waste-input" data-waste-type="eva">
+                                    <span class="item-icon">🚀</span>
+                                    <span class="item-label">EVA Waste</span>
+                                    <span class="item-amount">1,890 kg</span>
+                                </div>
+                                <div class="flow-item waste-input" data-waste-type="aluminum">
+                                    <span class="item-icon">⚙️</span>
+                                    <span class="item-label">Aluminum</span>
+                                    <span class="item-amount">1,260 kg</span>
+                                </div>
+                                <div class="flow-item waste-input" data-waste-type="foam">
+                                    <span class="item-icon">🧊</span>
+                                    <span class="item-label">Foam</span>
+                                    <span class="item-amount">2,520 kg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-arrows">
+                            <div class="animated-arrow" id="arrow1"></div>
+                            <div class="animated-arrow" id="arrow2"></div>
+                            <div class="animated-arrow" id="arrow3"></div>
+                        </div>
+
+                        <div class="flow-stage processing-stage">
+                            <h3>Processing Center</h3>
+                            <div class="processing-modules">
+                                <div class="processing-module" data-process="sorting">
+                                    <div class="module-icon">🔍</div>
+                                    <h4>Sorting & Analysis</h4>
+                                    <p>Material identification and contamination assessment</p>
+                                    <div class="module-status active">ACTIVE</div>
+                                </div>
+                                <div class="processing-module" data-process="cleaning">
+                                    <div class="module-icon">🧼</div>
+                                    <h4>Decontamination</h4>
+                                    <p>UV sterilization and chemical cleaning</p>
+                                    <div class="module-status active">ACTIVE</div>
+                                </div>
+                                <div class="processing-module" data-process="transformation">
+                                    <div class="module-icon">⚡</div>
+                                    <h4>Material Transformation</h4>
+                                    <p>Thermal, mechanical, and chemical processing</p>
+                                    <div class="module-status active">ACTIVE</div>
+                                </div>
+                                <div class="processing-module" data-process="forming">
+                                    <div class="module-icon">🏭</div>
+                                    <h4>Product Formation</h4>
+                                    <p>Molding, casting, and assembly operations</p>
+                                    <div class="module-status active">ACTIVE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-arrows">
+                            <div class="animated-arrow" id="arrow4"></div>
+                            <div class="animated-arrow" id="arrow5"></div>
+                            <div class="animated-arrow" id="arrow6"></div>
+                        </div>
+
+                        <div class="flow-stage output-stage">
+                            <h3>Output Products</h3>
+                            <div class="stage-items">
+                                <div class="flow-item product-output">
+                                    <span class="item-icon">🧱</span>
+                                    <span class="item-label">Building Materials</span>
+                                    <span class="item-amount">2,940 kg</span>
+                                </div>
+                                <div class="flow-item product-output">
+                                    <span class="item-icon">📦</span>
+                                    <span class="item-label">Containers</span>
+                                    <span class="item-amount">2,205 kg</span>
+                                </div>
+                                <div class="flow-item product-output">
+                                    <span class="item-icon">🛠️</span>
+                                    <span class="item-label">Tools & Parts</span>
+                                    <span class="item-amount">1,715 kg</span>
+                                </div>
+                                <div class="flow-item product-output">
+                                    <span class="item-icon">🏠</span>
+                                    <span class="item-label">Insulation</span>
+                                    <span class="item-amount">1,960 kg</span>
+                                </div>
+                                <div class="flow-item product-output">
+                                    <span class="item-icon">🎨</span>
+                                    <span class="item-label">Decorations</span>
+                                    <span class="item-amount">980 kg</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interactive-cards">
+                <h2>Waste Category Details</h2>
+                <p>Click on any waste category to explore the recycling process</p>
+
+                <div class="cards-grid">
+                    <article class="waste-card" data-waste-type="fabrics">
+                        <div class="card-header">
+                            <span class="card-icon">👕</span>
+                            <h3>Fabric Materials</h3>
+                            <span class="card-percentage">25%</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="waste-stats">
+                                <div class="stat">
+                                    <span class="stat-value">3,150</span>
+                                    <span class="stat-unit">kg input</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">2,678</span>
+                                    <span class="stat-unit">kg output</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">85%</span>
+                                    <span class="stat-unit">efficiency</span>
+                                </div>
+                            </div>
+                            <div class="process-preview">
+                                <p><strong>Primary Output:</strong> Thermal insulation panels</p>
+                                <p><strong>Secondary:</strong> Fabric reinforcement sheets</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="process-status">Processing Active</span>
+                        </div>
+                    </article>
+
+                    <article class="waste-card" data-waste-type="packaging">
+                        <div class="card-header">
+                            <span class="card-icon">📦</span>
+                            <h3>Food Packaging</h3>
+                            <span class="card-percentage">30%</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="waste-stats">
+                                <div class="stat">
+                                    <span class="stat-value">3,780</span>
+                                    <span class="stat-unit">kg input</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">2,722</span>
+                                    <span class="stat-unit">kg output</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">72%</span>
+                                    <span class="stat-unit">efficiency</span>
+                                </div>
+                            </div>
+                            <div class="process-preview">
+                                <p><strong>Primary Output:</strong> Storage containers</p>
+                                <p><strong>Secondary:</strong> Component trays</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="process-status">Processing Active</span>
+                        </div>
+                    </article>
+
+                    <article class="waste-card" data-waste-type="eva">
+                        <div class="card-header">
+                            <span class="card-icon">🚀</span>
+                            <h3>EVA Suit Waste</h3>
+                            <span class="card-percentage">15%</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="waste-stats">
+                                <div class="stat">
+                                    <span class="stat-value">1,890</span>
+                                    <span class="stat-unit">kg input</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1,285</span>
+                                    <span class="stat-unit">kg output</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">68%</span>
+                                    <span class="stat-unit">efficiency</span>
+                                </div>
+                            </div>
+                            <div class="process-preview">
+                                <p><strong>Primary Output:</strong> Maintenance tools</p>
+                                <p><strong>Secondary:</strong> Equipment parts</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="process-status">Processing Active</span>
+                        </div>
+                    </article>
+
+                    <article class="waste-card" data-waste-type="aluminum">
+                        <div class="card-header">
+                            <span class="card-icon">⚙️</span>
+                            <h3>Aluminum Composites</h3>
+                            <span class="card-percentage">10%</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="waste-stats">
+                                <div class="stat">
+                                    <span class="stat-value">1,260</span>
+                                    <span class="stat-unit">kg input</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">1,147</span>
+                                    <span class="stat-unit">kg output</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">91%</span>
+                                    <span class="stat-unit">efficiency</span>
+                                </div>
+                            </div>
+                            <div class="process-preview">
+                                <p><strong>Primary Output:</strong> Structural reinforcements</p>
+                                <p><strong>Secondary:</strong> Equipment frames</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="process-status">Processing Active</span>
+                        </div>
+                    </article>
+
+                    <article class="waste-card" data-waste-type="foam">
+                        <div class="card-header">
+                            <span class="card-icon">🧊</span>
+                            <h3>Foam Packaging</h3>
+                            <span class="card-percentage">20%</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="waste-stats">
+                                <div class="stat">
+                                    <span class="stat-value">2,520</span>
+                                    <span class="stat-unit">kg input</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">2,218</span>
+                                    <span class="stat-unit">kg output</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">88%</span>
+                                    <span class="stat-unit">efficiency</span>
+                                </div>
+                            </div>
+                            <div class="process-preview">
+                                <p><strong>Primary Output:</strong> Construction bricks</p>
+                                <p><strong>Secondary:</strong> Insulation blocks</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="process-status">Processing Active</span>
+                        </div>
+                    </article>
+
+                    <article class="waste-card total-summary">
+                        <div class="card-header">
+                            <span class="card-icon">♻️</span>
+                            <h3>Total System</h3>
+                            <span class="card-percentage">100%</span>
+                        </div>
+                        <div class="card-content">
+                            <div class="waste-stats">
+                                <div class="stat">
+                                    <span class="stat-value">12,600</span>
+                                    <span class="stat-unit">kg input</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">9,800</span>
+                                    <span class="stat-unit">kg output</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value">78%</span>
+                                    <span class="stat-unit">efficiency</span>
+                                </div>
+                            </div>
+                            <div class="process-preview">
+                                <p><strong>Mission Goal:</strong> Zero waste disposal</p>
+                                <p><strong>Status:</strong> Exceeding targets</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span class="process-status mission-critical">Mission Critical</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="system-metrics">
+                <h2>Real-Time System Metrics</h2>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <h3>Processing Rate</h3>
+                        <div class="metric-display">
+                            <span class="metric-value">47.3</span>
+                            <span class="metric-unit">kg/sol</span>
+                        </div>
+                        <div class="metric-trend positive">↗ +5.2% from yesterday</div>
+                        <div class="metric-chart">
+                            <div class="mini-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 75%"></div>
+                                <div class="bar" style="height: 55%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Energy Efficiency</h3>
+                        <div class="metric-display">
+                            <span class="metric-value">94.7</span>
+                            <span class="metric-unit">%</span>
+                        </div>
+                        <div class="metric-trend positive">↗ Optimal performance</div>
+                        <div class="progress-ring">
+                            <svg class="ring-svg" width="80" height="80">
+                                <circle cx="40" cy="40" r="35" stroke="var(--mars-gray)" stroke-width="4" fill="none" />
+                                <circle cx="40" cy="40" r="35" stroke="var(--mars-green)" stroke-width="4" fill="none"
+                                    stroke-dasharray="220" stroke-dashoffset="12" class="ring-progress" />
+                            </svg>
+                            <span class="ring-text">94.7%</span>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>System Uptime</h3>
+                        <div class="metric-display">
+                            <span class="metric-value">1,247</span>
+                            <span class="metric-unit">sols</span>
+                        </div>
+                        <div class="metric-trend positive">↗ 100% availability</div>
+                        <div class="uptime-indicator">
+                            <div class="uptime-dot active"></div>
+                            <div class="uptime-dot active"></div>
+                            <div class="uptime-dot active"></div>
+                            <div class="uptime-dot active"></div>
+                            <div class="uptime-dot active"></div>
+                        </div>
+                    </div>
+
+                    <div class="metric-card">
+                        <h3>Output Quality</h3>
+                        <div class="metric-display">
+                            <span class="metric-value">98.2</span>
+                            <span class="metric-unit">%</span>
+                        </div>
+                        <div class="metric-trend positive">↗ Above specification</div>
+                        <div class="quality-bars">
+                            <div class="quality-bar excellent">Excellent</div>
+                            <div class="quality-bar good">Good</div>
+                            <div class="quality-bar fair">Fair</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>System Status</h4>
+                    <p>All processing modules operational</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Next Maintenance</h4>
+                    <p>Sol 1,275 - Scheduled inspection</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergency Protocols</h4>
+                    <p>Auto-shutdown enabled</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+    <style>
+        /* System-specific styles */
+        .page-header {
+            background: linear-gradient(135deg, var(--mars-dark) 0%, var(--mars-gray) 50%, var(--mars-red) 100%);
+            padding: 3rem 2rem;
+            text-align: center;
+            border-bottom: 2px solid var(--mars-red);
+        }
+
+        .header-content h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .system-overview {
+            padding: 4rem 2rem;
+        }
+
+        .flow-diagram h2 {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .flow-container {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .flow-stage {
+            background: rgba(44, 44, 44, 0.8);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            border: 2px solid var(--mars-red);
+        }
+
+        .flow-stage h3 {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .stage-items {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .flow-item {
+            background: rgba(28, 28, 28, 0.8);
+            padding: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--mars-gold);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .flow-item:hover {
+            transform: translateX(5px);
+            border-left-color: var(--mars-red);
+            box-shadow: var(--shadow-light);
+        }
+
+        .item-icon {
+            font-size: 1.5rem;
+            min-width: 30px;
+            text-align: center;
+        }
+
+        .item-label {
+            flex: 1;
+            font-weight: 600;
+            color: var(--text-light);
+        }
+
+        .item-amount {
+            font-family: monospace;
+            color: var(--mars-gold);
+            font-weight: 600;
+        }
+
+        .processing-modules {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .processing-module {
+            background: rgba(28, 28, 28, 0.6);
+            padding: 1.5rem;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid rgba(168, 50, 50, 0.3);
+            transition: var(--transition);
+        }
+
+        .processing-module:hover {
+            border-color: var(--mars-gold);
+            transform: scale(1.02);
+        }
+
+        .module-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .processing-module h4 {
+            color: var(--mars-gold);
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .processing-module p {
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .module-status {
+            background: var(--mars-green);
+            color: var(--mars-dark);
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .animated-arrow {
+            width: 60px;
+            height: 4px;
+            background: var(--mars-gold);
+            position: relative;
+            animation: flowPulse 2s ease-in-out infinite;
+        }
+
+        .animated-arrow::after {
+            content: '';
+            position: absolute;
+            right: -8px;
+            top: -6px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid var(--mars-gold);
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
+        }
+
+        @keyframes flowPulse {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                box-shadow: 0 0 5px var(--mars-gold);
+            }
+
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 20px var(--mars-gold);
+            }
+        }
+
+        .interactive-cards {
+            padding: 4rem 2rem;
+            background: rgba(28, 28, 28, 0.3);
+        }
+
+        .interactive-cards h2 {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .interactive-cards>p {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .waste-card {
+            background: rgba(44, 44, 44, 0.9);
+            border-radius: var(--border-radius);
+            border: 2px solid transparent;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .waste-card:hover {
+            border-color: var(--mars-gold);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .waste-card.total-summary {
+            border-color: var(--mars-red);
+        }
+
+        .waste-card.total-summary:hover {
+            border-color: var(--mars-gold);
+        }
+
+        .card-header {
+            background: rgba(168, 50, 50, 0.2);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .card-icon {
+            font-size: 2rem;
+        }
+
+        .card-header h3 {
+            flex: 1;
+            font-family: var(--font-display);
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        .card-percentage {
+            background: var(--mars-gold);
+            color: var(--mars-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .waste-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(28, 28, 28, 0.6);
+            border-radius: 6px;
+        }
+
+        .stat-value {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--mars-gold);
+            font-weight: 600;
+        }
+
+        .stat-unit {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .process-preview p {
+            margin: 0.5rem 0;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .card-footer {
+            background: rgba(28, 28, 28, 0.8);
+            padding: 1rem 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .process-status {
+            color: var(--mars-green);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .process-status.mission-critical {
+            color: var(--mars-red);
+        }
+
+        .system-metrics {
+            padding: 4rem 2rem;
+        }
+
+        .system-metrics h2 {
+            font-family: var(--font-display);
+            color: var(--mars-gold);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .metric-card {
+            background: rgba(44, 44, 44, 0.8);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border: 1px solid var(--mars-red);
+            text-align: center;
+        }
+
+        .metric-card h3 {
+            color: var(--mars-gold);
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .metric-display {
+            margin-bottom: 1rem;
+        }
+
+        .metric-value {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            color: var(--text-light);
+            font-weight: 700;
+        }
+
+        .metric-unit {
+            font-size: 1.2rem;
+            color: var(--text-dim);
+            margin-left: 0.5rem;
+        }
+
+        .metric-trend {
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .metric-trend.positive {
+            color: var(--mars-green);
+        }
+
+        .mini-bars {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+            height: 40px;
+            align-items: end;
+        }
+
+        .bar {
+            width: 8px;
+            background: var(--mars-gold);
+            border-radius: 2px;
+            animation: barGrow 2s ease-out infinite alternate;
+        }
+
+        @keyframes barGrow {
+            0% {
+                transform: scaleY(0.7);
+            }
+
+            100% {
+                transform: scaleY(1);
+            }
+        }
+
+        .progress-ring {
+            position: relative;
+            display: inline-block;
+        }
+
+        .ring-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-display);
+            font-weight: 600;
+            color: var(--mars-green);
+        }
+
+        .uptime-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .uptime-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--mars-gray);
+        }
+
+        .uptime-dot.active {
+            background: var(--mars-green);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .quality-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .quality-bar {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .quality-bar.excellent {
+            background: var(--mars-green);
+            color: var(--mars-dark);
+        }
+
+        .quality-bar.good {
+            background: var(--mars-gold);
+            color: var(--mars-dark);
+        }
+
+        .quality-bar.fair {
+            background: var(--mars-red);
+            color: var(--text-light);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .flow-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .animated-arrow {
+                transform: rotate(90deg);
+                justify-self: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .processing-modules {
+                grid-template-columns: 1fr;
+            }
+
+            .waste-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</body>
+
+</html>
